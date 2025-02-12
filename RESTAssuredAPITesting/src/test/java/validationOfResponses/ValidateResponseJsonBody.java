@@ -34,12 +34,12 @@ public class ValidateResponseJsonBody {
 			
 			//check for presence of George in response body
 			
-		/*	Assert.assertEquals(responseString.contains("George"),true,"Check for presence of George");*/
+			Assert.assertEquals(responseString.contains("George"),true,"Check for presence of George");
 			
 			//get json path view of response body
 			
 			JsonPath jsonPathView  = responseBody.jsonPath();
-			
+			//use json path finder online to check the path manually
 			//x.data[4].first_name
 			String firstName = jsonPathView.get("data[0].first_name");
 			
