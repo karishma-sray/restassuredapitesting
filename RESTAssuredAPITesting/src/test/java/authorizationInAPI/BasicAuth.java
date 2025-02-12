@@ -18,6 +18,9 @@ public class BasicAuth {
 
 		//perform get request
 		//Response response = requestSpec.get();
+		//Non-preemptive() --> minimum 2 requests response required to process a call & by default basic authorization is non preemptive,ie; known as challanged basic auth.
+		//which means it'll not give credes to server initially, when server asked for it then only it'll gv creds.
+		
 		Response response = requestSpec.auth().preemptive().basic("postman", "password").get();
 
 		//print status line
