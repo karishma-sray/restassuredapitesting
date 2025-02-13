@@ -1,4 +1,4 @@
-package day2;
+package differentRequests;
 
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-package day2;
+package differentRequests;
 
 import static io.restassured.RestAssured.*;
 
@@ -7,14 +7,14 @@ import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
 
-public class Test_Patch_Response {
+public class Test_Put_Response {
 	@SuppressWarnings("unchecked")
 	@Test
 	public void post_Response_Test1() {
 		baseURI = "https://reqres.in/api/users/476";
 		
-		//PUT = partial update
-		//Update partial jsonData to jsonDataNew
+		//PUT = entirely update
+		//Update complete jsonData to jsonDataNew
 		
 		/*
 		 * { "name": "Karishma", 
@@ -24,12 +24,12 @@ public class Test_Patch_Response {
 		 */
 		
 		JSONObject jsonDataNew = new JSONObject();
-		jsonDataNew.put("name", "Meena");
+		jsonDataNew.put("name", "Sneha");
 		jsonDataNew.put("job", "ML");
 		
 		//write test cases in bdd format
 		given().header("content-type","application/json").contentType(ContentType.JSON).body(jsonDataNew.toJSONString()).
-		when().patch().
+		when().put().
 		then().statusCode(200).log().all();
 	}
 	
