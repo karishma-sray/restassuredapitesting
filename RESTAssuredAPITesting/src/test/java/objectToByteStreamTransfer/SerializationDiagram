@@ -1,0 +1,4 @@
+>>>>>>>>>>>>>>> what is serialization & reverse?
+programming mechanism by which we can convert object to stream of bytes(Json/xml) data or vice versa.
+which means if it has been serialized in mac book then it can be deserialized in windows
+This conversion is platform independent
