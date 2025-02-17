@@ -25,7 +25,7 @@ public class BearerAuth {
 		requestSpec.baseUri("https://gorest.co.in");
 		requestSpec.basePath("/public/v2/users");
 		
-		//create json object & pass the data
+		//create json object & pass the data for auth
 		
 		JSONObject payload = new JSONObject();
 		payload.put("name", "karishma");
