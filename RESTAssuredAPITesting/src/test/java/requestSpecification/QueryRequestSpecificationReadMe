@@ -1,0 +1,4 @@
+Q> How to retrive Query/RequestSpecification in Rest Assured?
+
+RequestSpecification is used to create a request.
+we set base uri, base path, headers etc to request using RequestSpecification.
